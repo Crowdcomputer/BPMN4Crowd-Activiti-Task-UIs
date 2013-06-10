@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.crowdcomputer</groupId>
-	<artifactId>crowdtask</artifactId>
+	<artifactId>taskUis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CrowdTask for crowdcomputer</name>
 	<dependencies>
@@ -43,7 +43,7 @@
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 						</manifest>
 						<manifestEntries>
-							<ActivitiDesigner-Extension-Name>Crowd Task</ActivitiDesigner-Extension-Name>
+							<ActivitiDesigner-Extension-Name>Crowd Computer</ActivitiDesigner-Extension-Name>
 						</manifestEntries>
 					</archive>
 				</configuration>

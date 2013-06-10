@@ -1,3 +1,4 @@
+package org.crowdcomputer;
 import java.util.Date;
 
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
@@ -21,8 +22,6 @@ public class CrowdTask extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Select the duration of the task", displayHelpLong = "Duration of the task, if 0 is set to 7 days")
 	private String deadline;
 	
-
-
 	// Integer number_of_instances,
 	@Property(type = PropertyType.TEXT, displayName = "Number of instances", required = true)
 	@Help(displayHelpShort = "Number of instances", displayHelpLong = "How many instances should be created?")
@@ -44,7 +43,7 @@ public class CrowdTask extends AbstractCustomServiceTask {
 
 	@Override
 	public String getName() {
-		return "CrowdComputer Human Task";
+		return "CrowdTask";
 	}
 	
 	@Override
@@ -53,5 +52,11 @@ public class CrowdTask extends AbstractCustomServiceTask {
 		// remember that it is mandatory to provide one.
 		return "icons/crowd.png";
 	}
+
+	@Override
+	  public String contributeToPaletteDrawer() {
+	    return "CrowdComputer";
+	  }
+
 
 }
