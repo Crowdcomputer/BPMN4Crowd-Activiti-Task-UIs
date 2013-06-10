@@ -1,9 +1,10 @@
 package org.crowdcomputer;
-import java.util.Date;
 
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
-import org.activiti.designer.integration.servicetask.annotation.*;
+import org.activiti.designer.integration.servicetask.annotation.Help;
+import org.activiti.designer.integration.servicetask.annotation.Property;
+import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.SplitDataTask")
