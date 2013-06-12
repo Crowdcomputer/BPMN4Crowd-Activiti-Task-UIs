@@ -37,7 +37,7 @@ public class CrowdTask extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Reward", displayHelpLong = "Reward")
 	private String reward;
 	// String reward_platform
-	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Withdrawl limit", required = true)
+	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Platform", required = true)
 	@Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
 	@PropertyItems({ "CROWDCOMPUTER", "CCM", "DOLLARS", "USD", "EURO", "EUR","COFFIES","COF" })
 	private String platform;
