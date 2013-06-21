@@ -1,4 +1,4 @@
-package org.crowdcomputer;
+package org.crowdcomputer.ui;
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;

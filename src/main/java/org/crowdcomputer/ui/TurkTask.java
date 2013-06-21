@@ -1,15 +1,14 @@
-package org.crowdcomputer;
+package org.crowdcomputer.ui;
 
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
-import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.CrowdTask")
-@Help(displayHelpShort = "Creates a new Crowd Task", displayHelpLong = "Creates a new Crowd Task")
-public class CrowdTask extends AbstractCustomServiceTask {
+@Runtime(javaDelegateClass = "org.crowdcomputer.TurkTask")
+@Help(displayHelpShort = "Creates a new Amazon Mechanical Turk Task", displayHelpLong = "Creates a new  Amazon Mechanical Turk Task")
+public class TurkTask extends AbstractCustomServiceTask {
 
 	// Long process: taken from variable
 	// String title: taken from task def
@@ -33,18 +32,13 @@ public class CrowdTask extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Page URL", displayHelpLong = "Page URL")
 	private String page_url;
 	// Double reward,
-	@Property(type = PropertyType.TEXT, displayName = "Reward", required = true)
+	@Property(type = PropertyType.TEXT, displayName = "Reward in USD dollars (be sure to have enough)", required = true)
 	@Help(displayHelpShort = "Reward", displayHelpLong = "Reward")
 	private String reward;
-	// String reward_platform
-	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Platform", required = true)
-	@Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
-	@PropertyItems({ "CROWDCOMPUTER", "CCM", "DOLLARS", "USD", "EURO", "EUR","COFFIES","COF" })
-	private String platform;
 
 	@Override
 	public String getName() {
-		return "CrowdTask";
+		return "TurkTask";
 	}
 	
 	@Override
