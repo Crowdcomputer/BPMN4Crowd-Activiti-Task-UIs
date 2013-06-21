@@ -5,7 +5,7 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.MergeDataTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.MergeData")
 @Help(displayHelpShort = "Creates a new Merge Data Task", displayHelpLong = "Creates a new Merge Data Task")
 public class MergeData extends AbstractCustomServiceTask {
 

@@ -5,9 +5,9 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.SplitObjectTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.SplitObject")
 @Help(displayHelpShort = "Creates a new Split Object Task", displayHelpLong = "Creates a new Split Object Task")
-public class SplitObjectTask extends AbstractCustomServiceTask {
+public class SplitObject extends AbstractCustomServiceTask {
 
 	@Property(type = PropertyType.TEXT, displayName = "Shared fields", required = true)
 	@Help(displayHelpShort = "Shared fields that will be placed in both objects, separated by commas", displayHelpLong = "")

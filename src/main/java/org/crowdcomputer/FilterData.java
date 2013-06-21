@@ -5,7 +5,7 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.FilterDataTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.FilterData")
 @Help(displayHelpShort = "Creates a new Filter Data Task", displayHelpLong = "Creates a new Filter Data Task")
 public class FilterData extends AbstractCustomServiceTask {
 

@@ -5,9 +5,9 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.JoinObjectTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.JoinObject")
 @Help(displayHelpShort = "Creates a new Join Object Task", displayHelpLong = "Creates a new Join Object Task")
-public class JoinObjectTask extends AbstractCustomServiceTask {
+public class JoinObject extends AbstractCustomServiceTask {
 
 	@Property(type = PropertyType.TEXT, displayName = "Shared field", required = true)
 	@Help(displayHelpShort = "Shared field among the objects", displayHelpLong = "This field is used to merge two objects")

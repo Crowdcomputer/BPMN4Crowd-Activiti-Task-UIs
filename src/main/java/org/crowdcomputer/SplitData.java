@@ -7,7 +7,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.SplitDataTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.SplitData")
 @Help(displayHelpShort = "Creates a new Merge Data Task", displayHelpLong = "Creates a new Merge Data Task")
 public class SplitData extends AbstractCustomServiceTask {
 
