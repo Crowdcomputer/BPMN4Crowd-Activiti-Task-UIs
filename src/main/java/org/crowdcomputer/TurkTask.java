@@ -4,7 +4,6 @@ import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
-import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.TurkTask")
@@ -36,11 +35,6 @@ public class TurkTask extends AbstractCustomServiceTask {
 	@Property(type = PropertyType.TEXT, displayName = "Reward in USD dollars (be sure to have enough)", required = true)
 	@Help(displayHelpShort = "Reward", displayHelpLong = "Reward")
 	private String reward;
-	// String reward_platform
-//	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Platform", required = true)
-//	@Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
-//	@PropertyItems({ "CROWDCOMPUTER", "CCM", "DOLLARS", "USD", "EURO", "EUR","COFFIES","COF" })
-//	private String platform;
 
 	@Override
 	public String getName() {
