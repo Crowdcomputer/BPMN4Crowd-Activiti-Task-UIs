@@ -6,7 +6,7 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.TurkTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.TurkTask")
 @Help(displayHelpShort = "Creates a new Amazon Mechanical Turk Task", displayHelpLong = "Creates a new  Amazon Mechanical Turk Task")
 public class TurkTask extends AbstractCustomServiceTask {
 
@@ -35,6 +35,14 @@ public class TurkTask extends AbstractCustomServiceTask {
 	@Property(type = PropertyType.TEXT, displayName = "Reward in USD dollars (be sure to have enough)", required = true)
 	@Help(displayHelpShort = "Reward", displayHelpLong = "Reward")
 	private String reward;
+	
+	@Property(type = PropertyType.TEXT, displayName = "Input data name", required =  true, defaultValue="data")
+	@Help(displayHelpShort = "Input data name", displayHelpLong = "Input data name")
+	private String input;
+	
+	@Property(type = PropertyType.TEXT, displayName = "Output data name", required =  true, defaultValue="data")
+	@Help(displayHelpShort = "Output data name", displayHelpLong = "Output data name")
+	private String output;
 
 	@Override
 	public String getName() {

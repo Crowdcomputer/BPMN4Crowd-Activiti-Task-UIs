@@ -5,7 +5,7 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.MergeData")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.MergeData")
 @Help(displayHelpShort = "Creates a new Merge Data Task", displayHelpLong = "Creates a new Merge Data Task")
 public class MergeData extends AbstractCustomServiceTask {
 
@@ -13,6 +13,13 @@ public class MergeData extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Shared field among the objects of the data", displayHelpLong = "This field has to be present in all the objects of the dataset and it's used to performe the merge")
 	private String field;
 	
+	@Property(type = PropertyType.TEXT, displayName = "Input data name", required =  true, defaultValue="data")
+//	@Help(displayHelpShort = "Input data names (separated by commas)", displayHelpLong = "Input data names")
+	private String input;
+	
+	@Property(type = PropertyType.TEXT, displayName = "Output data name", required =  true, defaultValue="data")
+//	@Help(displayHelpShort = "Input data name", displayHelpLong = "Input data name")
+	private String output;
 
 	@Override
 	public String getName() {
@@ -23,6 +30,8 @@ public class MergeData extends AbstractCustomServiceTask {
 	public String getSmallIconPath() {
 		// This is the icon of the component
 		// remember that it is mandatory to provide one.
+//		return "icons/crowd.png";
+
 		return "icons/mergedata.png";
 	}
 	
