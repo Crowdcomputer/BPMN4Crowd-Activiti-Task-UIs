@@ -1,4 +1,4 @@
-package org.crowdcomputer.ui;
+package org.crowdcomputer.ui.data;
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;
@@ -9,10 +9,10 @@ import org.activiti.designer.integration.servicetask.annotation.Runtime;
 @Help(displayHelpShort = "Creates a new Merge Data Task", displayHelpLong = "Creates a new Merge Data Task")
 public class MergeData extends AbstractCustomServiceTask {
 
-	@Property(type = PropertyType.TEXT, displayName = "Shared field", required = true)
-	@Help(displayHelpShort = "Shared field among the objects of the data", displayHelpLong = "This field has to be present in all the objects of the dataset and it's used to performe the merge")
-	private String field;
-	
+//	@Property(type = PropertyType.TEXT, displayName = "Shared field", required = true)
+//	@Help(displayHelpShort = "Shared field among the objects of the data", displayHelpLong = "This field has to be present in all the objects of the dataset and it's used to performe the merge", defaultValue="")
+//	private String field;
+//	
 	@Property(type = PropertyType.TEXT, displayName = "Input data name", required =  true, defaultValue="data")
 //	@Help(displayHelpShort = "Input data names (separated by commas)", displayHelpLong = "Input data names")
 	private String input;
@@ -37,7 +37,7 @@ public class MergeData extends AbstractCustomServiceTask {
 	
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "CrowdComputer";
+	    return "BPM4Crowd Data";
 	  }
 
 

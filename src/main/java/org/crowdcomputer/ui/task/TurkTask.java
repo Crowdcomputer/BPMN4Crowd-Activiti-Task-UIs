@@ -1,4 +1,4 @@
-package org.crowdcomputer.ui;
+package org.crowdcomputer.ui.task;
 
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
@@ -18,7 +18,7 @@ public class TurkTask extends AbstractCustomServiceTask {
 	private String description;	
 	
 	// Date deadline,
-	@Property(type = PropertyType.PERIOD, displayName = "Task duration", required = false)
+	@Property(type = PropertyType.PERIOD, displayName = "Task duration", required = true)
 	@Help(displayHelpShort = "Select the duration of the task", displayHelpLong = "Duration of the task, if 0 is set to 7 days")
 	private String deadline;
 	
@@ -43,6 +43,11 @@ public class TurkTask extends AbstractCustomServiceTask {
 	@Property(type = PropertyType.TEXT, displayName = "Output data name", required =  true, defaultValue="data")
 	@Help(displayHelpShort = "Output data name", displayHelpLong = "Output data name")
 	private String output;
+	
+	@Property(type = PropertyType.BOOLEAN_CHOICE, displayName = "DON'T merge data", required =  true, defaultValue="true")
+//	@Help(displayHelpShort = "Output data name", displayHelpLong = "Output data name")
+	private String merge;
+	
 
 	@Override
 	public String getName() {
@@ -58,7 +63,7 @@ public class TurkTask extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "CrowdComputer";
+	    return "BPM4Crowd Tasks";
 	  }
 
 

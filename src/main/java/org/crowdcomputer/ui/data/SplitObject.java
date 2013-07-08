@@ -1,4 +1,4 @@
-package org.crowdcomputer.ui;
+package org.crowdcomputer.ui.data;
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;
@@ -37,7 +37,8 @@ public class SplitObject extends AbstractCustomServiceTask {
 	
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "CrowdComputer";
+	    return "BPM4Crowd Data";
+
 	  }
 
 

@@ -1,4 +1,4 @@
-package org.crowdcomputer.ui;
+package org.crowdcomputer.ui.data;
 
 import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
@@ -41,7 +41,7 @@ public class JoinObject extends AbstractCustomServiceTask {
 
 	@Override
 	public String contributeToPaletteDrawer() {
-		return "CrowdComputer";
+	    return "BPM4Crowd Data";
 	}
 
 }
