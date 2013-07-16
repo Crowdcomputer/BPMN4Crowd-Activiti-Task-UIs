@@ -7,7 +7,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.NewsletterTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.task.NewsletterTask")
 @Help(displayHelpShort = "Creates a new Newsletter  Task", displayHelpLong = "Creates a new Newsletter Task")
 public class NewsletterTask extends AbstractCustomServiceTask {
 
@@ -33,15 +33,24 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Page URL", displayHelpLong = "Page URL")
 	private String page_url;
 	// Double reward,
+	@Property(type = PropertyType.TEXT, displayName = "Validation Process", required = true)
+	@Help(displayHelpShort = "Validation Process", displayHelpLong = "Filenanme")
+	private String validation_process;
+	// Double reward,
+	
 	@Property(type = PropertyType.TEXT, displayName = "Reward", required = true)
 	@Help(displayHelpShort = "Reward", displayHelpLong = "Reward")
 	private String reward;
 	// String reward_platform
-	
 	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Platform", required = true)
 	@Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
-	@PropertyItems({ "CROWDCOMPUTER", "CCM", "DOLLARS", "USD", "EURO", "EUR","COFFIES","COF" })
+	@PropertyItems({ "CROWDCOMPUTER", "CCM", "DOLLARS", "USD", "EURO", "EUR","COFFEES","COF" })
 	private String platform;
+	
+	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Strategy", required = true)
+	@Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
+	@PropertyItems({ "Pay ALL", "ALL", "Pay None", "NONE", "Pay Valid", "VALID"})
+	private String reward_strategy;
 	
 	@Property(type = PropertyType.BOOLEAN_CHOICE, displayName = "DON'T merge data", required =  true, defaultValue="true")
 //	@Help(displayHelpShort = "Output data name", displayHelpLong = "Output data name")
@@ -69,7 +78,7 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPM4Crowd Tasks";
+	    return "BPMN4Crowd Tasks";
 	  }
 
 

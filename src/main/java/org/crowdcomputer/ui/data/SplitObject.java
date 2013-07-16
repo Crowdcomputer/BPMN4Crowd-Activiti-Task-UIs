@@ -5,7 +5,7 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.SplitObject")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.data.SplitObject")
 @Help(displayHelpShort = "Creates a new Split Object Task", displayHelpLong = "Creates a new Split Object Task")
 public class SplitObject extends AbstractCustomServiceTask {
 
@@ -37,7 +37,7 @@ public class SplitObject extends AbstractCustomServiceTask {
 	
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPM4Crowd Data";
+	    return "BPMN4Crowd Data";
 
 	  }
 

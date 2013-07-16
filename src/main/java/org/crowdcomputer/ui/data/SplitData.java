@@ -7,7 +7,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.SplitData")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.data.SplitData")
 @Help(displayHelpShort = "Creates a new Merge Data Task", displayHelpLong = "Creates a new Merge Data Task")
 public class SplitData extends AbstractCustomServiceTask {
 
@@ -51,7 +51,7 @@ public class SplitData extends AbstractCustomServiceTask {
 
 	@Override
 	public String contributeToPaletteDrawer() {
-	    return "BPM4Crowd Data";
+	    return "BPMN4Crowd Data";
 	}
 
 }
