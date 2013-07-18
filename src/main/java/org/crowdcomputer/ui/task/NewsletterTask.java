@@ -33,7 +33,7 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Page URL", displayHelpLong = "Page URL")
 	private String page_url;
 	// Double reward,
-	@Property(type = PropertyType.TEXT, displayName = "Validation Process", required = true)
+	@Property(type = PropertyType.TEXT, displayName = "Validation Process", required = false)
 	@Help(displayHelpShort = "Validation Process", displayHelpLong = "Filenanme")
 	private String validation_process;
 	// Double reward,

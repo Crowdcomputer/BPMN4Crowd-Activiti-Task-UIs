@@ -34,7 +34,7 @@ public class ContestTask extends AbstractCustomServiceTask {
 	private String page_url;
 	// Double reward,
 	
-	@Property(type = PropertyType.TEXT, displayName = "Validation Process", required = true)
+	@Property(type = PropertyType.TEXT, displayName = "Validation Process",required = false)
 	@Help(displayHelpShort = "Validation Process", displayHelpLong = "Filenanme")
 	private String validation_process;
 	// Double reward,
