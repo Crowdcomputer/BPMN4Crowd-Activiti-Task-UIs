@@ -9,6 +9,11 @@ The steps to install it are:
 - that's it.
 
 #How to use it.
-Draw your process specifying all the parameters that are required. It might be complex the first time, so write [me](https://github.com/esseti) in case of trouble.
-Once the process is made, upload it to the [crowdcomputer](http://dev.crowdcomputer.org) and cross your fingers.
+- go and login on [crowdcomputer](http://www.crowdcomputer.org)
+- write [me](https://github.com/esseti) to activate your beta account.
+- Create an `Activiti project`
+- Create an `Actitivi diagram`
+- Draw your process specifying all the required parameters. (It might be complex the first time, so write [me](https://github.com/esseti) in case of trouble)
+- Compile the process using the [BPMN4Crowd-Compiler](https://github.com/esseti/BPMN4Crowd-Compiler)
+- Once the process is made, upload the zip to the [upload](http://www.crowdcomputer.org/req/bpmn/upload/) page and cross your fingers.
 
