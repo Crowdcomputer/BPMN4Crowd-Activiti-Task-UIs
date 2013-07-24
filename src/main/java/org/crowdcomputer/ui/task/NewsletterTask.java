@@ -33,7 +33,7 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 	@Help(displayHelpShort = "Page URL", displayHelpLong = "Page URL")
 	private String page_url;
 	// Double reward,
-	@Property(type = PropertyType.TEXT, displayName = "Validation Process", required = false)
+	@Property(type = PropertyType.TEXT, displayName = "Validation Process")
 	@Help(displayHelpShort = "Validation Process", displayHelpLong = "Filenanme")
 	private String validation_process;
 	// Double reward,
@@ -49,7 +49,7 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 	
 	@Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Strategy", required = true)
 	@Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
-	@PropertyItems({ "Pay ALL", "ALL", "Pay None", "NONE", "Pay Valid", "VALID"})
+	@PropertyItems({ "Pay ALL", "ALL", "Pay None", "NONE", "Pay Valid", "VALID","Best", "BEST"})
 	private String reward_strategy;
 	
 	@Property(type = PropertyType.BOOLEAN_CHOICE, displayName = "DON'T merge data", required =  true, defaultValue="true")

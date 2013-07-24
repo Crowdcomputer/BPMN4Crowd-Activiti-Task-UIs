@@ -10,11 +10,11 @@ import org.activiti.designer.integration.servicetask.annotation.Runtime;
 @Help(displayHelpShort = "Set validation of the work", displayHelpLong = "Set validation of the work")
 public class ValidationTask extends AbstractCustomServiceTask {
 
-	@Property(type = PropertyType.TEXT, displayName = "Work Valid", defaultValue = "true",required = false)
+	@Property(type = PropertyType.TEXT, displayName = "Work Valid")
 	 @Help(displayHelpShort = "Validation value", displayHelpLong ="if empty will load data from input field")
 	private String validation;
 	
-	@Property(type = PropertyType.TEXT, displayName = "Input data name to check for validation value",required = false, defaultValue = "data")
+	@Property(type = PropertyType.TEXT, displayName = "Input data name to check for validation value", defaultValue = "data")
 	@Help(displayHelpShort = "Input data name", displayHelpLong = "Input data name")
 	private String input;
 

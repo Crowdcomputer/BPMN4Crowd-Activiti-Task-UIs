@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.crowdcomputer</groupId>
 	<artifactId>Croco-Task-UIs</artifactId>
-	<version>0.0.1</version>
+	<version>0.1.0</version>
 	<name>CrowdTask for crowdcomputer</name>
 	<dependencies>
 		<dependency>
