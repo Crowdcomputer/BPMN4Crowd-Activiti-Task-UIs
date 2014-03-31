@@ -41,7 +41,7 @@ public class SplitData extends AbstractCustomServiceTask {
 
 	@Override
 	public String getName() {
-		return "Split Data Task";
+		return "Split Data Set Task";
 	}
 
 	@Override

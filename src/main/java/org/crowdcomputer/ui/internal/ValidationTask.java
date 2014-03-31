@@ -20,18 +20,18 @@ public class ValidationTask extends AbstractCustomServiceTask {
 
 	@Override
 	public String getName() {
-		return "Validation Task";
+		return "Quality Validate Task";
 	}
 
 	@Override
 	public String getSmallIconPath() {
 		// This is the icon of the component
 		// remember that it is mandatory to provide one.
-		return "icons/validate.png";
+		return "icons/cc.png";
 	}
 
 	@Override
 	public String contributeToPaletteDrawer() {
-		return "BPMN4Crowd Internal Tasks";
+		return "BPMN4Crowd Tactic Internal Tasks";
 	}
 }

@@ -7,9 +7,9 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.task.NewsletterTask")
-@Help(displayHelpShort = "Creates a new Mailinglist  Task", displayHelpLong = "Creates a new Mailinglist Task")
-public class NewsletterTask extends AbstractCustomServiceTask {
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.task.BidTask")
+@Help(displayHelpShort = "Creates a new Auction Task", displayHelpLong = "Creates a new Auction Task")
+public class BitTask extends AbstractCustomServiceTask {
 
 	// Long process: taken from variable
 	// String title: taken from task def
@@ -24,15 +24,14 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 	private String deadline;
 	
 	// Integer number_of_instances,
-	@Property(type = PropertyType.MULTILINE_TEXT, displayName = "Emails, separated by comma", required = true)
-	@Help(displayHelpShort = "Emails, separated by comma", displayHelpLong = "Emails, separated by comma")
-	private String emails;
+	@Property(type = PropertyType.TEXT, displayName = "Number of instances", required = true)
+	@Help(displayHelpShort = "Number of instances", displayHelpLong = "How many instances should be created?")
+	private String number_of_instances;
 	
 	// String page_url,
 	@Property(type = PropertyType.TEXT, displayName = "Page URL", required = true)
 	@Help(displayHelpShort = "Page URL", displayHelpLong = "Page URL")
 	private String page_url;
-	// Double reward,
 	@Property(type = PropertyType.TEXT, displayName = "Validation Process")
 	@Help(displayHelpShort = "Validation Process", displayHelpLong = "Filenanme")
 	private String validation_process;
@@ -63,10 +62,12 @@ public class NewsletterTask extends AbstractCustomServiceTask {
 	@Property(type = PropertyType.TEXT, displayName = "Output data name", required =  true, defaultValue="data")
 	@Help(displayHelpShort = "Output data name", displayHelpLong = "Output data name")
 	private String output;
+	
+	
 
 	@Override
 	public String getName() {
-		return "Mailinglist";
+		return "Auction";
 	}
 	
 	@Override

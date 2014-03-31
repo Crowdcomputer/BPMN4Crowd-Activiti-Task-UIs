@@ -7,7 +7,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.impl.data.JoinObject")
-@Help(displayHelpShort = "Creates a new Join Object Task", displayHelpLong = "Creates a new Join Object Task")
+@Help(displayHelpShort = "Creates a new Join Data Structure Task", displayHelpLong = "Creates a new Join Data Structure Task")
 public class JoinObject extends AbstractCustomServiceTask {
 
 	@Property(type = PropertyType.TEXT, displayName = "Shared field", required = true)
@@ -27,7 +27,7 @@ public class JoinObject extends AbstractCustomServiceTask {
 
 	@Override
 	public String getName() {
-		return "Join Object Task";
+		return "Join Data Structure Task";
 	}
 
 	@Override

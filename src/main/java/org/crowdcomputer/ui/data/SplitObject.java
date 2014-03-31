@@ -6,7 +6,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.impl.data.SplitObject")
-@Help(displayHelpShort = "Creates a new Split Object Task", displayHelpLong = "Creates a new Split Object Task")
+@Help(displayHelpShort = "Creates a new Split Data Strucutre Task", displayHelpLong = "Creates a new Split Data Strucutre Task")
 public class SplitObject extends AbstractCustomServiceTask {
 
 	@Property(type = PropertyType.TEXT, displayName = "Shared fields (separated by comma)", required = true)
@@ -27,7 +27,7 @@ public class SplitObject extends AbstractCustomServiceTask {
 	
 	@Override
 	public String getName() {
-		return "Split Object Task";
+		return "Split Data Strucutre Task";
 	}
 	
 	@Override

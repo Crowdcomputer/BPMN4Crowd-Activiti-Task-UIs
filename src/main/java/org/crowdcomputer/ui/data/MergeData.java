@@ -6,7 +6,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.impl.data.MergeData")
-@Help(displayHelpShort = "Creates a new Merge Data Task", displayHelpLong = "Creates a new Merge Data Task")
+@Help(displayHelpShort = "Creates a new Merge Data Set Task", displayHelpLong = "Creates a new Merge Data Set Task")
 public class MergeData extends AbstractCustomServiceTask {
 
 //	@Property(type = PropertyType.TEXT, displayName = "Shared field", required = true)
@@ -23,7 +23,7 @@ public class MergeData extends AbstractCustomServiceTask {
 
 	@Override
 	public String getName() {
-		return "Merge Data Task";
+		return "Merge Data Set Task";
 	}
 	
 	@Override
