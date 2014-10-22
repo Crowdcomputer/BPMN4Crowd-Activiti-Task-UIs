@@ -49,7 +49,7 @@ public class QualiytSet extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Tactic Def Tasks";
+	    return "BPMN4Crowd Quality Tasks";
 	  }
 
 

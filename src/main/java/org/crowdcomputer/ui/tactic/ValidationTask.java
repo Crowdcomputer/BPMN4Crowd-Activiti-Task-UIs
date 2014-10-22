@@ -4,16 +4,15 @@ import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
-import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.tactic.RewardReject")
-@Help(displayHelpShort = "Reject the reward", displayHelpLong = "Reject the reward")
-public class RewardReject extends AbstractCustomServiceTask {
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.tactic.ValidationTask")
+@Help(displayHelpShort = "Set validation of the work", displayHelpLong = "Set validation of the work")
+public class ValidationTask extends AbstractCustomServiceTask {
 
-	// Long process: taken from variable
-	// String title: taken from task def
-
+	@Property(type = PropertyType.TEXT, displayName = "Work Valid")
+	 @Help(displayHelpShort = "Validation value", displayHelpLong ="if empty will load data from input field")
+	private String validation_process;
 
     @Property(type = PropertyType.TEXT, displayName = "Input data name", required =  true, defaultValue="data")
     @Help(displayHelpShort = "Input data name", displayHelpLong = "Input data name")
@@ -31,12 +30,11 @@ public class RewardReject extends AbstractCustomServiceTask {
     @Help(displayHelpShort = "Output data execution variable name", displayHelpLong = "Output data execution variable name")
     private String output_execution;
 
-
 	@Override
 	public String getName() {
-		return "Reward reject";
+		return "Validation Process";
 	}
-	
+
 	@Override
 	public String getSmallIconPath() {
 		// This is the icon of the component
@@ -45,9 +43,7 @@ public class RewardReject extends AbstractCustomServiceTask {
 	}
 
 	@Override
-	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Reward Tasks";
-	  }
-
-
+	public String contributeToPaletteDrawer() {
+		return "BPMN4Crowd Quality Tasks";
+	}
 }

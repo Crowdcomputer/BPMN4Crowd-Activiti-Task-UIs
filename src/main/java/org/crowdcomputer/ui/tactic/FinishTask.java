@@ -6,7 +6,7 @@ import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.tactic.FinishTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.tactic.TaskFinish")
 @Help(displayHelpShort = "Finishes the task", displayHelpLong = "Finishes the main task")
 public class FinishTask extends AbstractCustomServiceTask {
 

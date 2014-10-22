@@ -45,7 +45,7 @@ public class RewardGive extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Tactic Def Tasks";
+	    return "BPMN4Crowd Reward Tasks";
 	  }
 
 

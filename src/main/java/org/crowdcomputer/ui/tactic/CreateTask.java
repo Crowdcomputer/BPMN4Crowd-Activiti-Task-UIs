@@ -54,7 +54,7 @@ public class CreateTask extends AbstractCustomServiceTask {
 
 	@Override
 	public String getName() {
-		return "Create Task";
+		return "Custom Task tactic";
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public class CreateTask extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Tactic Def Tasks";
+	    return "BPMN4Crowd Tasks";
 	  }
 
 
