@@ -81,7 +81,7 @@ public class ContestTask extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Tasks";
+	    return "BPMN4Crowd Crowd Tasks";
 	  }
 
 

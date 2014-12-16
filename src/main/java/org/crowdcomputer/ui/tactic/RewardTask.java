@@ -4,15 +4,22 @@ import org.activiti.designer.integration.servicetask.AbstractCustomServiceTask;
 import org.activiti.designer.integration.servicetask.PropertyType;
 import org.activiti.designer.integration.servicetask.annotation.Help;
 import org.activiti.designer.integration.servicetask.annotation.Property;
+import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.impl.tactic.RewardTask")
-@Help(displayHelpShort = "Inovke the process for the reward", displayHelpLong = "Inovke the process for the reward")
+@Help(displayHelpShort = "Invoke the reward for the task", displayHelpLong = "Invoke the reward for the task")
+
 public class RewardTask extends AbstractCustomServiceTask {
 
-    @Property(type = PropertyType.TEXT, displayName = "Reward process")
-    @Help(displayHelpShort = "Reward process file", displayHelpLong ="Reward process file")
-    private String reward_process;
+    @Property(type = PropertyType.RADIO_CHOICE, displayName = "Reward Strategy", required = true)
+    @Help(displayHelpShort = "The maximum daily withdrawl amount ", displayHelpLong = "Choose the maximum daily amount that can be withdrawn from the account.")
+    @PropertyItems({ "Pay ALL", "ALL", "Pay None", "NONE", "Pay Valid", "VALID","Best", "BEST"})
+    private String reward_strategy;
+
+    @Property(type = PropertyType.TEXT, displayName = "For PAY VALID specify the threshold", required =  true, defaultValue="50")
+    @Help(displayHelpShort = "pays if validation >= threshold", displayHelpLong = "if validation >= of threshold then it's valid")
+    private String threshold;
 
     @Property(type = PropertyType.TEXT, displayName = "Input data name", required =  true, defaultValue="data")
     @Help(displayHelpShort = "Input data name", displayHelpLong = "Input data name")
@@ -31,7 +38,7 @@ public class RewardTask extends AbstractCustomServiceTask {
     private String output_execution;
 	@Override
 	public String getName() {
-		return "Reward process";
+		return "Reward strategy";
 	}
 
 	@Override
@@ -43,6 +50,6 @@ public class RewardTask extends AbstractCustomServiceTask {
 
 	@Override
 	public String contributeToPaletteDrawer() {
-		return "BPMN4Crowd Reward Tasks";
+		return "BPMN4Crowd Validation and Reward";
 	}
 }

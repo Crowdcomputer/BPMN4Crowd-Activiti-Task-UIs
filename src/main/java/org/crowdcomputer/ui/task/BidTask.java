@@ -9,7 +9,7 @@ import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
 @Runtime(javaDelegateClass = "org.crowdcomputer.impl.task.BidTask")
 @Help(displayHelpShort = "Creates a new Auction Task", displayHelpLong = "Creates a new Auction Task")
-public class BitTask extends AbstractCustomServiceTask {
+public class BidTask extends AbstractCustomServiceTask {
 
 	// Long process: taken from variable
 	// String title: taken from task def
@@ -79,7 +79,7 @@ public class BitTask extends AbstractCustomServiceTask {
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Tasks";
+	    return "BPMN4Crowd Crowd Tasks";
 	  }
 
 

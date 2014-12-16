@@ -10,8 +10,8 @@ import org.activiti.designer.integration.servicetask.annotation.Runtime;
 @Help(displayHelpShort = "Set validation of the work", displayHelpLong = "Set validation of the work")
 public class ValidationTask extends AbstractCustomServiceTask {
 
-	@Property(type = PropertyType.TEXT, displayName = "Work Valid")
-	 @Help(displayHelpShort = "Validation value", displayHelpLong ="if empty will load data from input field")
+	@Property(type = PropertyType.TEXT, displayName = "Validation process")
+	 @Help(displayHelpShort = "Validation process", displayHelpLong ="validation process file")
 	private String validation_process;
 
     @Property(type = PropertyType.TEXT, displayName = "Input data name", required =  true, defaultValue="data")
@@ -44,6 +44,6 @@ public class ValidationTask extends AbstractCustomServiceTask {
 
 	@Override
 	public String contributeToPaletteDrawer() {
-		return "BPMN4Crowd Quality Tasks";
+		return "BPMN4Crowd Validation and Reward";
 	}
 }

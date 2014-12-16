@@ -7,7 +7,7 @@ import org.activiti.designer.integration.servicetask.annotation.Property;
 import org.activiti.designer.integration.servicetask.annotation.PropertyItems;
 import org.activiti.designer.integration.servicetask.annotation.Runtime;
 
-@Runtime(javaDelegateClass = "org.crowdcomputer.impl.tactic.CreateTask")
+@Runtime(javaDelegateClass = "org.crowdcomputer.impl.task.CreateTask")
 @Help(displayHelpShort = "Creates a Task", displayHelpLong = "Creates a new Task")
 public class CreateTask extends AbstractCustomServiceTask {
 
@@ -61,12 +61,12 @@ public class CreateTask extends AbstractCustomServiceTask {
 	public String getSmallIconPath() {
 		// This is the icon of the component
 		// remember that it is mandatory to provide one.
-		return "icons/cc.png";
+		return "icons/crowd.png";
 	}
 
 	@Override
 	  public String contributeToPaletteDrawer() {
-	    return "BPMN4Crowd Tasks";
+	    return "BPMN4Crowd Crowd Tasks";
 	  }
 
 
